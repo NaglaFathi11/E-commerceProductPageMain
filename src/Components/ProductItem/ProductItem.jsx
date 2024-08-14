@@ -8,16 +8,37 @@ import { useState, useEffect } from "react";
 import ShowProductImages from "../ShowProductImages/ShowProductImages";
 
 export default function ProductItem(props) {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([
+    {
+      id: 1,
+      bigImage: "/images/image-product-1.jpg",
+      thumbnailImage: "/images/image-product-1-thumbnail.jpg",
+    },
+    {
+      id: 2,
+      bigImage: "/images/image-product-2.jpg",
+      thumbnailImage: "/images/image-product-2-thumbnail.jpg",
+    },
+    {
+      id: 3,
+      bigImage: "/images/image-product-3.jpg",
+      thumbnailImage: "/images/image-product-3-thumbnail.jpg",
+    },
+    {
+      id: 4,
+      bigImage: "/images/image-product-4.jpg",
+      thumbnailImage: "/images/image-product-4-thumbnail.jpg",
+    },
+  ]);
 
-  useEffect(() => {
-    function CallAPI() {
-      fetch("http://localhost:3000/images").then((response) =>
-        response.json().then((response) => setData(response))
-      );
-    }
-    CallAPI();
-  }, []);
+  // useEffect(() => {
+  //   function CallAPI() {
+  //     fetch("http://localhost:3000/images").then((response) =>
+  //       response.json().then((response) => setData(response))
+  //     );
+  //   }
+  //   CallAPI();
+  // }, []);
 
   // console.log(data);
 
