@@ -1,0 +1,68 @@
+#container {
+    background-color: hsla(0, 0%, 0%, 0.753);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slider {
+    position: relative;
+
+}
+
+.prevNext {
+    display: inline-block;
+    background: transparent;
+    border: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: url("../public/images/hand-cursor.png"), pointer;
+}
+
+.PrevIcon {
+    position: absolute;
+    left: -46px;
+    top: 12rem;
+}
+
+.NexIcon {
+    position: absolute;
+    right: -46px;
+    top: 12rem;
+}
+
+.prevNext img {
+    background-color: rgb(255 255 255);
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+#closeImageSection {
+    position: absolute;
+    top: 3px;
+    right: -39px;
+    width: 23px;
+    filter: brightness(100) saturate(0);
+    box-shadow: 0px 0px 11px 0px #83837542;
+    cursor: url("../public/images/hand-cursor.png"), pointer;
+}
+
+@media (max-width: 997px) {
+    #closeImageSection {
+        top: 13px;
+        right: 17px;
+    }
+
+    #container {
+        display: none;
+    }
+
+}

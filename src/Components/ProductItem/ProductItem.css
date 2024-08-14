@@ -1,0 +1,271 @@
+#allSections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    width: 100%;
+    padding: 5rem;
+}
+
+section#text-item {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+}
+
+section#picture-item {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 23px;
+}
+
+/*Images Section  */
+#thumbnails {
+    display: flex;
+    column-gap: 27px;
+    align-items: center;
+    justify-content: center;
+}
+
+#bigIMG {
+    width: 25.6rem;
+    border-radius: 10px;
+    cursor: url("../public/images/hand-cursor.png"), pointer;
+}
+
+#thumbnailsIMG {
+    width: 5rem;
+    border-radius: 10px;
+    cursor: url("../public/images/hand-cursor.png"), pointer;
+    position: relative;
+}
+
+#thumbnailsIMG:hover {
+    opacity: 60%;
+}
+
+.thumbnailImgActive {
+    border: 3px solid hsl(26, 100%, 55%);
+    opacity: 60%;
+}
+
+.prevNextIcons {
+    display: none;
+}
+
+/* Text Section  */
+div#headerWrapper,
+div#priceWrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+}
+
+#text-item label {
+    color: hsl(219, 9%, 45%);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#text-item h1 {
+    color: hsl(0, 0%, 0%);
+    font-size: 3rem;
+    line-height: 49px;
+}
+
+#text-item p {
+    color: hsl(219, 9%, 45%);
+    line-height: 28px;
+}
+
+#price {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+}
+
+#price span {
+    color: hsl(0, 0%, 0%);
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+#price label {
+    color: white;
+    background: black;
+    height: 28px;
+    padding: 0 10px 0 10px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: discount;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes discount {
+    from {
+        background-color: black;
+    }
+
+    to {
+        background-color: rgb(255, 0, 0);
+    }
+}
+
+#old-price {
+    color: hsl(219, 9%, 45%);
+    font-weight: 500;
+}
+
+#counter-plus-addCart {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+#counter-btn {
+    background-color: hsl(25, 100%, 94%);
+    width: 27%;
+    height: 34px;
+    padding: 23px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#counter-btn button {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: url("../public/images/hand-cursor.png"), pointer;
+}
+
+#cartBtn {
+    background-color: hsl(26, 100%, 55%);
+    width: 50%;
+    height: 34px;
+    padding: 23px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    column-gap: 17px;
+    align-items: center;
+    border: none;
+    outline: none;
+    font-weight: 800;
+    cursor: url("../public/images/hand-cursor.png"), pointer;
+}
+
+#cartBtn:hover {
+    opacity: 80%;
+}
+
+#CartIconAdd {
+    filter: brightness(0) saturate(100%);
+    width: 18px;
+    height: 18px;
+}
+
+
+@media (max-width: 997px) {
+    #allSections {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    section#text-item,
+    section#picture-item {
+        width: 100%;
+    }
+
+    #bigIMG {
+        width: 100%;
+        height: 28rem;
+        border-radius: 0;
+    }
+
+    #thumbnails {
+        display: none;
+    }
+
+    section#text-item {
+        padding-left: 35px;
+        padding-right: 23px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        row-gap: 20px;
+    }
+
+    #text-item h1 {
+        font-size: 2rem;
+    }
+
+    div#priceWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 5rem;
+    }
+
+    #counter-plus-addCart {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
+    #counter-btn,
+    #cartBtn {
+        width: 100%;
+    }
+
+    #cursorial {
+        width: 100%;
+    }
+
+    .prevNextIcons {
+        display: inline-block;
+        background: transparent;
+        border: none;
+        position: relative;
+        margin-left: 20px;
+        margin-right: 20px;
+        cursor: url("../public/images/hand-cursor.png"), pointer;
+    }
+
+    .PreviousIcon {
+        position: absolute;
+        left: 0;
+        top: 16rem;
+        margin-left: 6px;
+    }
+
+    .NextIcon {
+        position: absolute;
+        right: 0;
+        top: 16rem;
+        margin-right: 6px;
+    }
+
+    .prevNextIcons img {
+        background-color: rgb(255 255 255);
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 20px;
+        border-radius: 50%;
+    }
+}
