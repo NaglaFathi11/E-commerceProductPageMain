@@ -283,7 +283,6 @@ button#checkOutBTn:hover {
         display: block;
         font-size: 2rem;
         cursor: url("../public/images/hand-cursor.png"), pointer;
-        /* إظهار زر التبديل على الشاشات الصغيرة */
     }
 
     .ul-wrapper {
